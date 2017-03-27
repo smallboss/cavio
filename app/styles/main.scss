@@ -94,10 +94,78 @@ button {
 .container{
   width: 100%;
   max-width: 1920px;
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: $containerMarginXL;
+  padding-right: $containerMarginXL;
   margin-left:auto;
   margin-right: auto;
+}
+
+.wrap-new-products{
+  margin-left: $containerMarginXL;
+}
+
+#new-products{
+  margin-top: -200px;
+  position: relative;
+}
+
+.new-products-left-side{
+  padding: 60px 80px;
+  background: $almostBlackColor;
+  width: 600px;
+  float: left;
+
+  .new-label{
+    background: $mainActiveColor;
+    text-transform: uppercase;
+    color: $almostBlackColor;
+    font-size: 12px;
+    font-family: "ProbaPro Lt";
+    padding: 5px;
+    float: left;
+  }
+
+  .title{
+    font-size: 80px;
+    color: white;
+  }
+
+  .dots{
+    float: right;
+  }
+
+  .descr{
+    font-size: 18px;
+    opacity: 0.6;
+    color: white;
+    font-family: "ProbaPro Lt";
+  }
+}
+
+.new-products-right-side{
+  padding: 15px;
+  background: white;
+}
+
+.new-products-right-item-inner-item{
+  font-family: "ProbaPro Lt";
+  .product-code{
+    font-family: 'ProbaPro';
+    color: #493a2f;
+    font-size:12px;
+  }
+
+  .product-name{
+    font-family: 'ProbaPro';
+    color: black;
+    font-size:30px;
+  }
+
+  .product-size{
+    font-family: 'ProbaPro';
+    color: #8f8f8f;
+    font-size:14px;
+  }
 }
 
 h3.section-title{
@@ -115,6 +183,17 @@ h3.section-title{
     right: 0;
     margin:auto;
   }
+}
+
+.wrap-new-items{
+  height: 400px;
+  width: 100%;
+  //margin-left: 120px;
+}
+
+.new-items-descr{
+  width: 500px;
+
 }
 
 // ========================= PHILOSOPHY =======================

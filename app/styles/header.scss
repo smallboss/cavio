@@ -2,14 +2,18 @@
 
 header{
   //background: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 
 // MENU BURGER =======
 #nav-icon {
   float: left;
-  width: 60px;
-  height: 45px;
+  width: 40px;
+  height: 30px;
   position: relative;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
@@ -24,7 +28,7 @@ header{
   span {
     display: block;
     position: absolute;
-    height: 6px;
+    height: 2px;
     width: 100%;
     background: white;
     border-radius: 9px;
@@ -34,15 +38,15 @@ header{
     transition: .25s ease-in-out;
 
     &:nth-child(1) {
-      top: 0px;
+      top: 0;
       transform-origin: left center;
     }
     &:nth-child(2) {
-      top: 18px;
+      top: 14px;
       transform-origin: left center;
     }
     &:nth-child(3) {
-      top: 36px;
+      top: 28px;
       transform-origin: left center;
     }
   }
@@ -64,7 +68,7 @@ header{
     }
     &:nth-child(3) {
       transform: rotate(-45deg);
-      top: 39px;
+      top: 26px;
       left: 8px;
     }
   }
@@ -135,11 +139,11 @@ header{
 // SHOW MENU STYLES
 .show-main-menu{
   .short-nav-item-inner{
-    color: $showMemuTopColor;
+    color: $showMenuTopColor;
   }
 
   #nav-icon span{
-    background: $showMemuTopColor;
+    background: $showMenuTopColor;
   }
 
   .top-nav{
@@ -147,7 +151,7 @@ header{
   }
 
   .svg-stash{
-    fill: $showMemuTopColor;
+    fill: $showMenuTopColor;
   }
 }
 
@@ -162,6 +166,7 @@ header{
   position: relative;
   z-index: 1;
   display: table;
+  margin-left: 120px;
 }
 
 .svg-stash{
@@ -188,16 +193,133 @@ header{
 }
 
 .wrap-banner{
-  height: 1190px;
+  //height: 1190px;
   position: relative;
 
-  &.main{
-    background: url('../images/banner-main-shaded.jpg') top center ;
+  //&.main{
+  //  background: url('../images/banner-main-shaded.jpg') top center ;
+  //
+  //  background-repeat: no-repeat;
+  //  background-size: cover;
+  //}
+}
 
-    background-repeat: no-repeat;
-    background-size: cover;
+.banner-inner{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+#banner-img{
+  width: 100%;
+}
+
+.banner-circle{
+  cursor: pointer;
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+  .banner-circle-relay{
+    cursor: pointer;
+    position: relative;
+    border: 2px dotted $mainActiveColor;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: all .3s ease-in-out;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin:auto;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      background: $bannerCircleBorderColor;
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover{
+      border-color:white;
+      &:before{
+        background: white;
+      }
+    }
   }
 }
+
+.banner-popup{
+  display: none;
+  position: absolute;
+  left: 45px;
+  top: -19px;
+  background: $almostBlackColor;
+  color: white;
+}
+
+.popup-show .banner-popup{
+  display: block;
+}
+
+.banner-popup-code{
+  font-family: 'ProbaPro Lt';
+  text-transform: uppercase;
+  color: #929292;
+  font-size: 12px;
+}
+
+.banner-popup-text{
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.banner-popup-relate{
+  position: relative;
+  padding: 15px;
+  &:before{
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+    height: 13px;
+    width: 13px;
+    background: $almostBlackColor;
+    transform: rotate(45deg);
+  }
+}
+
+
+#bookcase-circle{
+  left: 45.3%;
+  top: 22%;
+}
+
+#something-circle{
+  top: 52%;
+  right: 35%;
+}
+
+#sofa-circle {
+  top: 60%;
+  left: 14%;
+}
+
+#desk-circle {
+  top: 49%;
+  left: 37%;
+}
+
+#smtable-circle{
+  left: 75%;
+  top: 63%;
+}
+
 
 .wrap-left-nav{
   margin-left: -120px;
@@ -226,6 +348,13 @@ header{
   top:0;
   bottom: 0;
   z-index: 2;
+  display: table;
+  height: 100%;
+}
+
+.table-c_m{
+  display: table-cell;
+  vertical-align: middle;
 }
 
 ul.left-nav{
