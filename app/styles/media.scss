@@ -1,0 +1,18 @@
+
+@import "variables";
+
+@media screen and (max-width: 1400px){
+  .cat{
+    width: 25%;
+    height: 290px;
+  }
+
+  .cat-image {
+    width: 105px;
+    height: 115px;
+  }
+
+  .cat-name{
+    font-size: 26px;
+  }
+}

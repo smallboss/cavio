@@ -1,0 +1,251 @@
+
+@import 'https://fonts.googleapis.com/css?family=Oranienbaum';
+
+@import "variables";
+@import "header";
+
+
+@font-face {
+  font-family: "ProbaPro Lt";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/proba_pro/proba_pro_light-webfont.woff2") format("woff2"),
+       url("../fonts/proba_pro/proba_pro_light-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "ProbaPro";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/proba_pro/proba_pro_regular-webfont.woff2") format("woff2"),
+  url("../fonts/proba_pro/proba_pro_regular-webfont.woff") format("woff");
+}
+
+
+/* ========CLEARFIX========*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* для IE6-7 */
+.clearfix {
+  zoom: 1;
+}
+/*END ===== CLEARFIX========*/
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Oranienbaum';
+}
+
+main{
+}
+
+body{
+  background: rgba(29, 8, 8, 0.44);
+  margin: 0;
+}
+
+a{
+  transition: all .218s ease-in-out
+}
+
+button {
+  transition: all .1s ease;
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-text{
+
+}
+
+.btn{
+  background: $mainActiveColor;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font-family: 'ProbaPro Lt';
+  border: none;
+  font-size: 16px;
+  padding: 30px 48px;
+  text-transform: uppercase;
+  &:hover{
+    background: darken($mainActiveColor, 20%);
+  }
+}
+
+
+.container-fullW{
+  width: 100%;
+}
+
+.container{
+  width: 100%;
+  max-width: 1920px;
+  padding-left: 120px;
+  padding-right: 120px;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+h3.section-title{
+  font-family: Oranienbaum;
+  font-size: 90px;
+  color: white;
+  font-weight: normal;
+  text-align: center;
+  position: relative;
+  &:after{
+    position: absolute;
+    height: 30px;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin:auto;
+  }
+}
+
+// ========================= PHILOSOPHY =======================
+.wrap-philosophy{
+  position: relative;
+}
+
+.phil-left{
+  float: left;
+  width: 55%;
+  text-align: right;
+  padding: 0 20px;
+}
+
+.phil-right{
+  float: left;
+  width: 45%;
+  padding: 0 20px;
+}
+
+
+
+.wrap-img-bg{
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  &:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: $mainActiveColor;
+    transition: all .5s ease-in-out;
+    z-index: -1;
+  }
+  &:hover:before{
+    transform: translate(-60px, -50px);
+  }
+
+  &.small:hover:before{
+    transform: translate(-30px, -30px);
+  }
+}
+
+.phil-text{
+  font-family: "ProbaPro Lt", serif;
+  font-size: 18px;
+  clear: both;
+  margin-top: 70px;
+  max-width: 450px;
+  width: 100%;
+  color: white;
+  opacity: .6;
+
+  a{
+    text-decoration: none;
+  }
+}
+// END ===================== PHILOSOPHY =======================
+
+
+// ========================= COLLECTION =======================
+
+.coll-name{
+  font-family: "Oranienbaum";
+  font-size: 48px;
+  color: white;
+}
+
+.numb-prod{
+  font-family: "ProbaPro Lt";
+  font-size: 16px;
+  color: #b2b2b2;
+}
+
+// END ====================== COLLECTION ======================
+
+
+// ========================= CATEGORY =========================
+.cat{
+  float: left;
+  width: 20%;
+  text-align: center;
+  border-bottom: 1px solid #818181;
+  border-right: 1px solid #818181;
+  height: 325px;
+  &:hover{
+    background: url("../images/bg_cat.jpg") center center no-repeat;
+
+    .cat-image{
+      fill: white;
+    }
+  }
+
+  a{
+    display: block;
+    text-decoration: none;
+    height: 100%;
+  }
+}
+
+.cat-image{
+  width: 120px;
+  height: 140px;
+  margin-top: 55px;
+  margin-bottom: 25px;
+  fill: $mainActiveColor;
+}
+
+.cat-name{
+  font-family: 'Oranienbaum';
+  font-size: 30px;
+  color: white;
+  margin-bottom: 63px;
+}
+
+.cat-wrapper{
+  margin-bottom: 80px;
+  border-top: 1px solid #818181;
+  border-left: 1px solid #818181;
+}
+
+.wrap-btn-more{
+  text-align: center;
+}
+
+// END ==================== CATEGORY ====================
+
+footer{
+  height: 400px;
+  background: $footerColor;
+}
+
+@import "media";
